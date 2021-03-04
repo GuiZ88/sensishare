@@ -5,7 +5,7 @@
     <img src="http://sensishare.org/prj/img/logo_green_mini.png" alt="Logo">
   </a>
 
-  <h3 align="center">SensIshare</h3>
+  <h3 align="center"><a href="http://sensishare.org/api/">SensIshare.org</a></h3>
 
   <p align="center">
     An API system to share sensor data
@@ -42,10 +42,10 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#arduino">Arduino Examples</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
@@ -54,7 +54,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-SenshiShare is an educational tool based on a REST API communication system, with NodaJs technology, for communication with and between IoT devices for the detection of specific measures. The need for centralization of surveys is a fundamental phase for the subsequent analysis of the same, in this project the aim is to create a server architecture capable of centralizing different data sensors, not homogeneous, interfaced through an API system. All in the perspective of an easy and accessible management.You can already imagine the usefulness of sharing sensors, eliminating redundancies, accessing remote data from a sensor in the repository managed by another user.
+SenshIshare is an educational tool based on a REST API communication system, with NodaJs technology, for communication with and between IoT devices for the detection of specific measures. The need for centralization of surveys is a fundamental phase for the subsequent analysis of the same, in this project the aim is to create a server architecture capable of centralizing different data sensors, not homogeneous, interfaced through an API system. All in the perspective of an easy and accessible management.You can already imagine the usefulness of sharing sensors, eliminating redundancies, accessing remote data from a sensor in the repository managed by another user.
+
+You can find request access to the system or create your own. Please go to sensishare.org for more information.
 
 ### Built With
 * [NodeJs](https://nodejs.org/)
@@ -79,37 +81,46 @@ You will also need a MongoDB database. Please follow this instructions [https://
 
 ### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/GuiZ88/sensishare.git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install express --save
    npm install mongoose --save
    ```
-4. Enter your API in `config.js`
+3. Update the environment configuration in `common/auth/env.config.js`
    ```JS
-   const API_KEY = 'ENTER YOUR API';
+   module.exports = {
+    "port": 3600,
+    "appEndpoint": "http://api.sensishare.org:3600", // app
+    "apiEndpoint": "http://api.sensishare.org:3600", // api
+    "AdminAuthKey": "N&sWc4]s&ae*r<5y.n!GL{M8_C^-sR2~XzMF5z-$r:{y)d(vWGa{K7_3@z4", // strong password for admin operation
+    "environment": "dev" // enviroment
+  };
+   ```
+4. Change MondoDB connection string `common/services/mongoose.service.js`
+   ```JS
+   mongoose.connect("mongodb://localhost:27017/sensors", options)
    ```
 
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
+To use the API you can follow the documentation on the site where all available calls are described.
+_For more examples, please refer to the [API Documentation](http://sensishare.org/api/)_
 
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/GuiZ88/sensishare/issues) for a list of proposed features (and known issues).
 
+<!-- ARDUINO -->
+## arduino
+
+See the [arduino examples](https://github.com/GuiZ88/sensishare/tree/main/arduino/mkr_1010) for some examples of integration with Arduino.
 
 
 <!-- CONTRIBUTING -->
@@ -124,53 +135,15 @@ Contributions are what make the open source community such an amazing place to b
 5. Open a Pull Request
 
 
-
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
-
+Distributed under the GNU GENERAL PUBLIC LICENSE Version 3 . See `LICENSE` for more information.
 
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Guido Camerlingo - [@Guiz88](https://twitter.com/guiz88) - g.camerlingo@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
-
-
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/GuiZ88/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+Project Link: [https://github.com/GuiZ88/sensishare](https://github.com/GuiZ88/sensishare)

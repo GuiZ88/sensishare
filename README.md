@@ -57,11 +57,9 @@
 SenshiShare is an educational tool based on a REST API communication system, with NodaJs technology, for communication with and between IoT devices for the detection of specific measures. The need for centralization of surveys is a fundamental phase for the subsequent analysis of the same, in this project the aim is to create a server architecture capable of centralizing different data sensors, not homogeneous, interfaced through an API system. All in the perspective of an easy and accessible management.You can already imagine the usefulness of sharing sensors, eliminating redundancies, accessing remote data from a sensor in the repository managed by another user.
 
 ### Built With
-
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
+* [NodeJs](https://nodejs.org/)
+* [moongoose](https://mongoosejs.com/)
+* [MongoDB](https://www.mongodb.com/)
 
 
 

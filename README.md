@@ -58,10 +58,9 @@ SenshiShare is an educational tool based on a REST API communication system, wit
 
 ### Built With
 * [NodeJs](https://nodejs.org/)
+* [Express](https://expressjs.com/)
 * [moongoose](https://mongoosejs.com/)
 * [MongoDB](https://www.mongodb.com/)
-
-
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -76,6 +75,7 @@ This is an example of how to list things you need to use the software and how to
   ```sh
   npm install npm@latest -g
   ```
+You will also need a MongoDB database. Please follow this instructions [https://docs.mongodb.com/manual/installation/](https://docs.mongodb.com/manual/installation/)
 
 ### Installation
 
@@ -86,7 +86,8 @@ This is an example of how to list things you need to use the software and how to
    ```
 3. Install NPM packages
    ```sh
-   npm install
+   npm install express --save
+   npm install mongoose --save
    ```
 4. Enter your API in `config.js`
    ```JS

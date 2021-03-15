@@ -7,6 +7,7 @@ const sensorSchema = new Schema({
     name: { type: String, required: [true, 'Why no name?'] },
     description: String,
     email: String,
+    maker: String,
     position: String,
     secretKey: { type: String, required: [true, 'Why no secretKey?'] }
 });

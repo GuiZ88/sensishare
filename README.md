@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://sensishare.org/">
-    <img src="http://sensishare.org/prj/img/logo_green_mini.png" alt="Logo">
+    <img src="http://sensishare.org/img/logo_green_mini.png" alt="Logo">
   </a>
 
   <h3 align="center"><a href="http://sensishare.org/api/">SensIshare.org</a></h3>

@@ -144,6 +144,6 @@ Distributed under the GNU GENERAL PUBLIC LICENSE Version 3 . See `LICENSE` for m
 <!-- CONTACT -->
 ## Contact
 
-Guido Camerlingo - [@Guiz88](https://twitter.com/guiz88) - g.camerlingo@gmail.com
+Guido Camerlingo - [@Guiz88](https://twitter.com/guiz88) - g.camerlingo @ gmail.com
 
 Project Link: [https://github.com/GuiZ88/sensishare](https://github.com/GuiZ88/sensishare)

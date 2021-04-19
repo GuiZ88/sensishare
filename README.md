@@ -43,6 +43,7 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#arduino">Arduino Examples</a></li>
+    <li><a href="#android">Android Examples</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -122,6 +123,11 @@ See the [open issues](https://github.com/GuiZ88/sensishare/issues) for a list of
 
 See the [arduino examples](https://github.com/GuiZ88/sensishare/tree/main/arduino/mkr_1010) for some examples of integration with Arduino.
 
+
+<!-- ANDROID -->
+## android
+
+See the [android examples](https://github.com/GuiZ88/sensishare/tree/main/android/app) for some examples of integration with Android
 
 <!-- CONTRIBUTING -->
 ## Contributing

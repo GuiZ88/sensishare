@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">SensIshare Demo</string>
+    <string name="availble_sensors">Sensors Available</string>
+    <string name="availble_data">Data Available</string>
+    <string name="celius">Celsius: </string>
+</resources>

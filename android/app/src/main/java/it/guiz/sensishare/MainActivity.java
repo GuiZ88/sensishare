@@ -36,18 +36,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<SensorModel>> call, Response<List<SensorModel>> response) {
                 if(response.isSuccessful()) {
+                    // Model of sensor
                     List<SensorModel> sensorList = response.body();
 
+                    // recycleView adapter
                     RecyclerView recyclerView = findViewById(R.id.sensorRecyclerView);
                     recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-
                     DividerItemDecoration itemDecor = new DividerItemDecoration(recyclerView.getContext(), VERTICAL);
                     recyclerView.addItemDecoration(itemDecor);
-
                     sensorViewAdapter = new SensorViewAdapter(sensorList);
                     recyclerView.setAdapter(sensorViewAdapter);
-
-
 
                     System.out.println(sensorList);
                 } else {
